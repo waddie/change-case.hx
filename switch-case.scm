@@ -1,4 +1,4 @@
-;; change-case.scm — text case conversion commands for Helix.
+;; switch-case.scm — text case conversion commands for Helix.
 ;;
 ;; SPDX-License-Identifier: AGPL-3.0-or-later
 ;; Copyright (C) 2026 Tom Waddington
@@ -195,7 +195,7 @@
 ;; All ranges are read from the pre-edit rope first, then rewritten from the
 ;; highest offset down so earlier offsets stay valid. The selections are then
 ;; restored over the converted text, accounting for any length changes.
-(define (change-case convert)
+(define (switch-case convert)
   (let* ([rope (current-rope)]
          [spans (sort (map (lambda (r) (cons (range->from r) (range->to r)))
                        (selection->ranges (current-selection-object)))
@@ -244,36 +244,36 @@
 
 ;;@doc
 ;; Convert the selected text to UPPERCASE
-(define (switch-to-uppercase) (change-case to-uppercase))
+(define (switch-to-uppercase) (switch-case to-uppercase))
 
 ;;@doc
 ;; Convert the selected text to lowercase
-(define (switch-to-lowercase) (change-case to-lowercase))
+(define (switch-to-lowercase) (switch-case to-lowercase))
 
 ;;@doc
 ;; Flip the case of the selected text (aLTERNATE cASE)
-(define (switch-to-alternate-case) (change-case to-alternate-case))
+(define (switch-to-alternate-case) (switch-case to-alternate-case))
 
 ;;@doc
 ;; Convert the selected text to PascalCase
-(define (switch-to-pascal-case) (change-case to-pascal-case))
+(define (switch-to-pascal-case) (switch-case to-pascal-case))
 
 ;;@doc
 ;; Convert the selected text to camelCase
-(define (switch-to-camel-case) (change-case to-camel-case))
+(define (switch-to-camel-case) (switch-case to-camel-case))
 
 ;;@doc
 ;; Convert the selected text to Title Case
-(define (switch-to-title-case) (change-case to-title-case))
+(define (switch-to-title-case) (switch-case to-title-case))
 
 ;;@doc
 ;; Convert the selected text to Sentence case
-(define (switch-to-sentence-case) (change-case to-sentence-case))
+(define (switch-to-sentence-case) (switch-case to-sentence-case))
 
 ;;@doc
 ;; Convert the selected text to snake_case
-(define (switch-to-snake-case) (change-case to-snake-case))
+(define (switch-to-snake-case) (switch-case to-snake-case))
 
 ;;@doc
 ;; Convert the selected text to kebab-case
-(define (switch-to-kebab-case) (change-case to-kebab-case))
+(define (switch-to-kebab-case) (switch-case to-kebab-case))

@@ -1,4 +1,4 @@
-# change-case
+# switch-case.hx
 
 Text case conversion commands for the [Helix editor](https://helix-editor.com).
 
@@ -32,13 +32,13 @@ UPPERCASE, lowercase, aLTERNATE cASE, Title Case and Sentence case preserve the 
 Install with [forge](https://github.com/mattwparas/steel), Steel’s package manager:
 
 ```sh
-forge pkg install --git https://github.com/waddie/change-case.hx
+forge pkg install --git https://github.com/waddie/switch-case.hx
 ```
 
 Then load the plugin in your `init.scm`:
 
 ```scheme
-(require "change-case/change-case.scm")
+(require "switch-case/switch-case.scm")
 ```
 
 ## Key bindings

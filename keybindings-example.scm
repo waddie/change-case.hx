@@ -1,4 +1,4 @@
-;; Example key bindings for change-case, reproducing the "case mode" under the
+;; Example key bindings for switch-case, reproducing the "case mode" under the
 ;; backtick (`) prefix proposed in helix-editor/helix#12043. Copy into init.scm.
 
 (keymap (global)
